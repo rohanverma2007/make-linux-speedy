@@ -1,6 +1,9 @@
 # make-linux-speedy
 Make Linux run very fast (NVIDIA Only)
 
+## Good Kernels
+- CachyOS Bore LTO
+
 ## Boot Options
 ```
 quiet loglevel=4 nvidia-drm.modeset=1 nowatchdog mitigations=off split_lock_detect=off intel_pstate=support_acpi_ppc tsc=reliable clocksource=tsc vm.vfs_cache_pressure=1 splash
@@ -25,3 +28,6 @@ By using the tool [LACT](https://github.com/ilya-zlobintsev/LACT) you can overcl
 - Run a game that is very demanding, or some benchmark tool like sysbench to test for system stability.
 - Go to the OC tab and adjust the GPU Clock by +10 and run sysbench/demanding game to test for system stability, VRAM clock should be adjusted by +100 until instability occurs.
 - For example, my computer has a 48 mHz GPU clock and 1150 mHz VRAM clock
+
+## Schedulers
+I recommend this program from CachyOS called scx-scheds and it allows you to hotswap between different schedulers, the scheduler I recommend using is the rusty scheduler, it's great and really optimized.
