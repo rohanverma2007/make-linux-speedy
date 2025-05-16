@@ -17,3 +17,11 @@ What does each parameter do?
 - tsc=reliable: Marks the Time Stamp Counter (TSC) as a reliable time source, TSC is used for reducing latency
 - clocksource=tsc: Forces the TSC as the system clock source (usually more performant than HPET or ACPI), used for reducing latency
 - vm.vfs_cache_pressure=1: Drastically reduces how aggressively the kernel drops directory and inode cache (helps filesystem performance at the cost of RAM)
+
+## Linux Overclocking
+By using the tool [LACT](https://github.com/ilya-zlobintsev/LACT) you can overclock your linux system on NVIDIA
+
+**How to use**
+- Run a game that is very demanding, or some benchmark tool like sysbench to test for system stability.
+- Go to the OC tab and adjust the GPU Clock by +10 and run sysbench/demanding game to test for system stability, VRAM clock should be adjusted by +100 until instability occurs.
+- For example, my computer has a 48 mHz GPU clock and 1150 mHz VRAM clock
